@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Report } from './reports/report.entity';
-import { ReportsController } from './reports/reports.controller';
 import { ReportsModule } from './reports/reports.module';
 import { User } from './users/user.entity';
-import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
 
 @Module({
@@ -18,6 +16,5 @@ import { UsersModule } from './users/users.module';
       synchronize: true,
     }),
   ],
-  controllers: [UsersController, ReportsController],
 })
 export class AppModule {}
